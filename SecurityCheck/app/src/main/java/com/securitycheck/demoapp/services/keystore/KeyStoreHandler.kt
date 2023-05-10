@@ -15,7 +15,7 @@ Example:
 When storing a password in the KeyStore, it is recommended to
 use a symmetric encryption algorithm to protect the password.
 */
-class KeyStoreManager(private val context: Context) {
+class KeyStoreHandler(private val context: Context) {
 
     companion object {
         private const val ANDROID_KEYSTORE = "AndroidKeyStore"

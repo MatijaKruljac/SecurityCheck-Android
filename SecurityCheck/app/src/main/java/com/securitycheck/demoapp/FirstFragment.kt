@@ -16,7 +16,7 @@ import com.securitycheck.demoapp.services.database.DBHandler
 import com.securitycheck.demoapp.services.datastore.DataStoreHandler
 import com.securitycheck.demoapp.services.helpers.CryptoManager
 import com.securitycheck.demoapp.services.helpers.User
-import com.securitycheck.demoapp.services.keystore.KeyStoreManager
+import com.securitycheck.demoapp.services.keystore.KeyStoreHandler
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
@@ -137,16 +137,16 @@ class FirstFragment : Fragment() {
     }
 
     private fun testKeyStoreEncryption() {
-        val keyStoreManager = KeyStoreManager(requireContext())
+        val keyStoreHandler = KeyStoreHandler(requireContext())
 
         val password = "my_password_2604"
         val key = "password_key"
 
         // Save the password
-        keyStoreManager.saveString(password, key)
+        keyStoreHandler.saveString(password, key)
 
         // Retrieve the password
-        val retrievedPassword = keyStoreManager.getString(key)
+        val retrievedPassword = keyStoreHandler.getString(key)
 
         if (retrievedPassword != null) {
             println(retrievedPassword)
