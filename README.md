@@ -67,8 +67,9 @@ By utilizing the Android Keystore System, you can ensure that sensitive data, su
 
 ## SQLite Database, SQLCipher
 SQLCipher is a standalone fork (an extension) of the SQLite database library that adds AES-256 encryption (standard in the industry) of database files and some other security features.
-GitHub repo: https://github.com/sqlcipher/android-database-sqlcipher
-SQLCipher API: https://www.zetetic.net/sqlcipher/sqlcipher-api
+
+- GitHub repo: https://github.com/sqlcipher/android-database-sqlcipher
+- SQLCipher API: https://www.zetetic.net/sqlcipher/sqlcipher-api
 
 
 
