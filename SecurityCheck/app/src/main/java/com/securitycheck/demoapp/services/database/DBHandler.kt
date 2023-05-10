@@ -64,12 +64,6 @@ class DBHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, nul
         return userList
     }
 
-    fun deleteUser(user: User) {
-        val db = writableDatabase
-        db.delete(TABLE_NAME, "$COLUMN_ID=?", arrayOf(user.id.toString()))
-        db.close()
-    }
-
     fun deleteAllUsers() {
         val db = writableDatabase
         db.delete(TABLE_NAME, null, null)
